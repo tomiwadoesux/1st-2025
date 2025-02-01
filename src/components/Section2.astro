@@ -1,0 +1,18 @@
+---
+const { text } = Astro.props;
+import styles from "../styles/section2.module.css";
+const videoContainer = "videoContainer"; // Define the class name
+const videoElement = "videoElement";    // Define the class name
+---
+
+<!-- <section>
+  <h3>Hey</h3>
+</section> -->
+<section class={styles["video-section"]}>
+  <div class={styles["videocontainer"]}>
+    <video class={styles["videoelement"]} autoplay muted loop>
+      <source src="https://res.cloudinary.com/duewivpjt/video/upload/v1737375396/large_2x_xajglp.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>

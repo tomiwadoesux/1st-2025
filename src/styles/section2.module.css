@@ -1,0 +1,30 @@
+/* Parent Container */
+
+.video-section {
+  display: flex;
+  grid-template-columns: 1.2fr 1fr; /* Adjust the ratio between image and text */
+  gap: 40px;
+  align-items: center;
+  background-color: #000; /* Black background */
+  color: #fff;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.videocontainer {
+  position: relative; /* Enables child elements like overlays or controls to be positioned */
+  width: 100%; /* Full width of the parent container */
+  /* max-width: 1200px;  */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Ensures video stays inside the container */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Video Element */
+.videoelement {
+  width: 100%; /* Video takes the full width of the container */
+  height: auto; /* Maintain the aspect ratio of the video */
+  object-fit: cover; /* Ensures the video scales proportionally and fills the container */
+}

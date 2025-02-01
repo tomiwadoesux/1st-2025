@@ -1,0 +1,36 @@
+---
+const { text } = Astro.props;
+// src/components/Section1.astro
+import styles from '../styles/section1.module.css'
+---
+
+<section class={styles['section-layout' ]}>
+  <div class={styles['outline-container']}>
+    <div class={styles['outline']}></div>
+    <div class={styles['main-image-container']} >
+
+      <img src="https://res.cloudinary.com/duewivpjt/image/upload/v1737246289/image_q9t8m4.png" alt="Headphones" class={styles['main-image']} />
+    </>
+  </div>
+
+  <!-- Person Image Section -->
+  <div class={styles['outline2']}></div>
+  <div class={styles['person-image']}>
+    <img src="https://res.cloudinary.com/duewivpjt/image/upload/v1737646165/width_1236_t8dw4v.png" alt="Person" />
+   
+  </div>
+
+  <div class={styles['text-container']}>
+    <h2>As Powerful</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also...
+    </p>
+    <p class={styles['release-info']}>
+      Released by lorem ipsum on <span>12/12/25</span>
+    </p>
+  </div>
+</section>
+ 

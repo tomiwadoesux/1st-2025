@@ -1,0 +1,219 @@
+.sectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust based on your design */
+  margin: 0 auto;
+  position: relative;
+}
+
+.right-image {
+  position: relative;
+  background-color: #3f0b0b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: -1310px;
+  left: 645px;
+  width: 590px;
+  height: 300px;
+  margin-bottom: -940px;
+}
+
+.container-2 {
+  position: relative;
+  background-color: #3f0b0b;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 250px;
+  left: 0; /* Remove extreme left positioning */
+  top: -285px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.redbg {
+  position: relative;
+  background-color: #3f0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  left: 0;
+  top: -285px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.container-1 {
+  position: relative;
+  background-color: #3f0b0b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  left: -65px;
+  top: -285px;
+  overflow: hidden;
+  width: 500px;
+}
+
+.up-image{
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 90%;
+}
+
+.down-image {
+  position: relative;
+  top: -500px;
+  left: 170px;
+  bottom: 0px;
+  width: 35%;
+}
+.outline{
+  position: relative;
+  bottom: 1270px;
+  left: 959px;
+  width: 300px;
+  height: 70px;
+  border: 1px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  z-index: 1;
+}
+
+.outline2{
+  position: relative;
+  top: 60px;
+  left: 160px;
+  width: 300px;
+  height: 370px;
+  border: 1px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  z-index: 1;
+}
+
+
+.outline3 {
+  position: relative;
+  top: -150px;
+  left: 380px;
+  width: 300px;
+  height: 270px;
+  border: 1px solid #fff;
+  border-top: none;
+  border-right: none;
+  z-index: 1;
+}
+.outlineContainer {
+  display: flex;
+  justify-content: center; /* Center the outline container */
+  align-items: center;
+  position: relative;
+}
+
+.img2 {
+  position: relative;
+  margin: 10px 0;
+  width: 135%;
+  top: -33px;
+  right: 103px;
+  height: auto;
+
+}
+
+.img1{
+  position: relative;
+  top: 0px;
+  left: 00px;
+  width: 70%;
+}
+
+/* Text Container */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 680px;
+  position: relative;
+  bottom: 350px;
+  left: -38px;
+}
+
+/* Headings */
+.text-container h4 {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-container h2 {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -90px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Paragraph */
+.text-container p {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 14.5px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-block-end: 0em;
+  width: 360px;
+  text-align: justify;
+}
+
+.text-container .release-info {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.text-container .release-info span {
+  color: #f00; /* Red color for the release date */
+}
+
+@media (max-width: 768px), (max-width: 1024px) {
+  .text-container {
+    margin-left: 50%; /* Adjusted margin for smaller screens */
+    top: 125rem; /* Adjusted positioning */
+  }
+
+  .text-container h4 {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .text-container h2 {
+    font-size: 1.5rem; /* Smaller font size */
+    margin-top: -1.5rem;
+  }
+
+  .text-container p {
+    font-size: 0.8rem; /* Adjusted font size */
+    width: 65%; /* Full width on smaller screens */
+  }
+
+  .text-container .release-info {
+    font-size: 0.75rem; /* Adjusted font size */
+  }
+}

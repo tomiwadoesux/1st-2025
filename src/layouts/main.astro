@@ -1,0 +1,20 @@
+---
+import Header from "../components/header.astro";
+const { title } = Astro.props;
+import styles from '../styles/main.module.css'
+---
+
+<!doctype html>
+<html class={styles["main"]} lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+</head>
+<body class="antialiased bg-black " >
+  <Header />
+  <script src="../assets/js/main.js"></script>
+  <Fragment set:html={import.meta.env.FOOTER_INJECT} />
+  
+</body>
+</html>
