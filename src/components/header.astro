@@ -1,0 +1,22 @@
+---
+import menu from "../collection/menu.json";
+import '../styles/header.css';
+
+---
+<header id="header" class="header">
+    <div class="header-container">
+      <nav class="menu-nav">
+        {menu.map((item) => (
+          <a href={item.url} class="menu-item" target="_blank" rel="noopener noreferrer">
+            {item.name}
+          </a>
+        ))}
+      </nav>
+      <div class="hamburger" id="hamburger-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    </div>
+  </header>

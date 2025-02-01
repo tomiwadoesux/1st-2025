@@ -1,0 +1,258 @@
+/* Overall Section Layout */
+.section-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 0rem; /* Add padding for spacing */
+  padding-top: 5.625rem;
+  margin: 0 auto;
+  max-width: 75rem; /* Restrict the width */
+  box-sizing: border-box;
+  justify-content: center; /* Ensures it stays centered */
+  text-align: center; /* Centers text within */
+}
+
+
+/* Outline and Images */
+.outline-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 7.75rem;
+}
+
+/* Outline */
+.outline {
+  position: absolute;
+  top: 15.9375rem; /* 255px / 16 */
+  left: -10rem; /* -160px / 16 */
+  width: 18.75rem; /* 300px / 16 */
+  height: 70%;
+  border: 1px solid #fff; /* White border */
+  border-top: none; /* Remove the top border */
+  border-right: none; /* Remove the left border */
+  z-index: 1;
+}
+
+.outline2 {
+  position: absolute;
+  top: 11.5625rem; /* 25px / 16 */
+  right: 37.9rem; /* 600px / 16 */
+  width: 3.125rem; /* 50px / 16 */
+  height: 2.3125rem; /* 37px / 16 */
+  border: 1px solid #fff;
+  border-left: 3.75rem; /* 60px / 16 */
+  border-top: none;
+  z-index: 1;
+}
+
+/* Main Image Container */
+.main-image-container {
+  position: relative;
+  background-color: #3f0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 34.375rem; /* 550px / 16 */
+  height: 34.375rem; /* 550px / 16 */
+  left: -8.4375rem; /* -135px / 16 */
+  top: 3.75rem; /* 60px / 16 */
+  margin: 0 auto; /* Center the container */
+}
+
+
+/* Main Image */
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  z-index: 1; /* Sets the image behind the overlay */
+}
+.person-image {
+  position: absolute;
+  top: 16.25rem; /* 260px / 16 */
+  left: 38.125rem; /* 610px / 16 */
+  transform: translate(
+    -30%,
+    -40%
+  ); /* Center the person image relative to the desired position */
+  z-index: 2; /* Places the person image above the main image */
+  width: 14.6875rem; /* 235px / 16 */
+  height: 17.5rem; /* 280px / 16 */
+  background-color: rgba(18, 44, 54, 0.6);
+  top: 2.5rem; /* 40px / 16 */
+  left: 18.75rem; /* 300px / 16 */
+  overflow: hidden; /* Ensures content stays within the box */
+  clip-path: polygon(
+    3.75rem 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 4.375rem
+  ); /* Creates the "L" shape cut-out */
+}
+
+.person-image img {
+  position: relative;
+  top: 0px;
+  right: 3.125rem; /* 50px / 16 */
+  bottom: 4.375rem; /* 70px / 16 */
+  width: auto;
+  height: auto;
+  max-width: 150%;
+  max-height: 150%;
+}
+
+/* Overlay Image */
+.overlay-image {
+  position: absolute;
+  top: -1.25rem; /* -20px / 16 */
+  right: -1.25rem; /* -20px / 16 */
+  width: 31.25%; /* 50% / 16 */
+  z-index: 3;
+  border-radius: 0.5rem; /* 8px / 16 */
+  box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+/* Text Container */
+.text-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.75rem; /* 60px / 16 */
+  text-align: left;
+  position: relative;
+}
+
+/* Headings */
+.text-container h4 {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 0.9375rem; /* 15px / 16 */
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-container h2 {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 1.6875rem; /* 27px / 16 */
+  font-style: normal;
+  font-weight: 700;
+  margin-top: -5.625rem; /* -90px / 16 */
+  line-height: normal;
+}
+
+/* Paragraph */
+.text-container p {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 0.90625rem; /* 14.5px / 16 */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: justify;
+
+  width: 30rem; /* 480px / 16 */
+}
+
+.text-container .release-info {
+  font-size: 0.875rem; /* 14px / 16 */
+  color: #aaa;
+}
+
+.text-container .release-info span {
+  color: #f00; /* Red color for the release date */
+}
+
+
+/* Tablet Responsiveness (768px to 1024px) */
+@media (max-width: 1024px) {
+  .section-layout {
+    grid-template-columns: 1fr; /* Stack columns for tablets */
+    gap: 2rem; /* Reduce gap for smaller screens */
+  }
+
+  .text-container {
+    margin-left: 2.5rem; /* Reduce margin for smaller screens */
+    width: 30.5rem;
+  }
+
+  .main-image-container {
+    width: 100%; /* Adjust width for smaller screens */
+    height: auto; /* Allow the height to adjust */
+    left: 0; /* Remove left positioning */
+    top: 1.25rem; /* Adjust top positioning */
+  }
+
+  .person-image {
+    left: 12rem; /* Adjust left positioning */
+    top: 10rem; /* Adjust top positioning */
+    width: 12rem; /* Adjust width for smaller screens */
+    height: 15rem; /* Adjust height for smaller screens */
+  }
+
+  .text-container h2 {
+    font-size: 1.5rem; /* Adjust font size */
+    margin-top: -3.75rem; /* Adjust margin */
+  }
+
+  .text-container p {
+    width: 80%; /* Full width for smaller screens */
+
+  }
+}
+
+
+/* Phone Responsiveness (less than 768px) */
+@media (max-width: 768px) {
+  .section-layout {
+    grid-template-columns: 1fr; /* Stack columns for mobile */
+    gap: 1.5rem; /* Reduce gap for mobile screens */
+  }
+  .outline2{
+    left: 18rem;
+top: 7rem;
+  }
+.outline{
+  left: -6rem;
+  top: 9.6rem;
+
+}
+  .text-container {
+    margin-left: 0.25rem; /* Reduce margin for mobile screens */
+  }
+
+  .main-image-container {
+    width: 80%; /* Full width for mobile screens */
+    height: auto;
+    left: -4rem;
+    top: 1.25rem;
+  }
+
+  .person-image {
+    left: 13rem;
+    top: 1rem; /* Adjust top positioning */
+    width: 10rem; /* Adjust width for mobile */
+    height: 12.5rem; /* Adjust height for mobile */
+  }
+
+  .text-container h2 {
+    font-size: 1.25rem; /* Adjust font size for mobile */
+    margin-top: -2.5rem; /* Adjust margin */
+  }
+
+  .text-container p {
+    width: 90%; /* Full width for mobile */
+    font-size: 0.875rem; /* Smaller font size */
+  }
+
+  .text-container .release-info {
+    font-size: 0.75rem; /* Smaller font size */
+  }
+}

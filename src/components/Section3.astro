@@ -1,0 +1,53 @@
+---
+const { text } = Astro.props;
+import styles from "../styles/section3.module.css";
+---
+
+
+  <div class="wrapper">
+    <section class={styles["section-layout"]}>
+      <div class={styles["outline-container"]}>
+        <div class={styles["outline"]}></div>
+        <div class={styles["main-image-container"]}>
+          <img
+            src="https://res.cloudinary.com/duewivpjt/image/upload/v1737475037/Rectangle_2_t5hppz.png"
+            alt="img"
+            class={styles["main-image"]}
+          />
+        </div>
+        <div class={styles["outline2"]}></div>
+        
+      </div>
+  
+      <div class={styles["person-image"]}>
+        <img
+          src="https://res.cloudinary.com/duewivpjt/image/upload/v1737475044/Rectangle_3_dj48fd.png"
+          alt="img"
+        />
+      </div>
+  
+      <div class={styles["text-container"]}>
+        <h2>As Powerful</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
+        <p class={styles["release-info"]}>
+          Released by lorem ipsum on <span>12/12/25</span>
+        </p>
+      </div>
+      <div class={styles["text-container-2"]}>
+        <h2>As Powerful</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s,
+        </p>
+        <p class={styles["release-info"]}>
+          Released by lorem ipsum on <span>12/12/25</span>
+        </p>
+      </div>
+    </section>
+  </div>
+  
