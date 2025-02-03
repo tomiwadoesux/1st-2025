@@ -10,7 +10,7 @@
   align-items: center;
   background-color: #000;
   color: #fff;
-  padding-bottom: 11.875rem;
+  padding-bottom: 9.875rem;
   margin: 0 auto;
   max-width: 75rem;
   width: 100%;
@@ -345,6 +345,7 @@
     padding: 2rem 1rem;
   }
   
+ 
   .text-container{
     /* Use similar centering as mobile */
     margin: 1rem auto;

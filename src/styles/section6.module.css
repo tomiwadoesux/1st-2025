@@ -10,8 +10,14 @@
   }
   
   .main-image {
-    width: 100vw; /* Ensures full width */
+    width: 100vw; /* Ensures full width */`
     height: 100vh; /* Ensures full height */
     object-fit: cover; /* Ensures the image fully covers the section */
+  }
+  @media (max-width: 768px) {
+    .main-image {
+      /* Still cover the screen, but you might experiment with the object-position */
+      object-position: center top;
+    }
   }
   

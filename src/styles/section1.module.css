@@ -15,7 +15,6 @@
   text-align: center; /* Centers text within */
 }
 
-
 /* Outline and Images */
 .outline-container {
   position: relative;
@@ -64,7 +63,6 @@
   top: 3.75rem; /* 60px / 16 */
   margin: 0 auto; /* Center the container */
 }
-
 
 /* Main Image */
 .main-image {
@@ -120,7 +118,7 @@
 }
 
 /* Text Container */
-.text-container{
+.text-container {
   display: flex;
   flex-direction: column;
   margin-left: 3.75rem; /* 60px / 16 */
@@ -170,7 +168,6 @@
   color: #f00; /* Red color for the release date */
 }
 
-
 /* Tablet Responsiveness (768px to 1024px) */
 @media (max-width: 1024px) {
   .section-layout {
@@ -204,26 +201,23 @@
 
   .text-container p {
     width: 80%; /* Full width for smaller screens */
-
   }
 }
 
-
 /* Phone Responsiveness (less than 768px) */
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   .section-layout {
     grid-template-columns: 1fr; /* Stack columns for mobile */
     gap: 1.5rem; /* Reduce gap for mobile screens */
   }
-  .outline2{
-    left: 18rem;
-top: 7rem;
+  .outline2 {
+    left: 15rem;
+    top: 7rem;
   }
-.outline{
-  left: -6rem;
-  top: 9.6rem;
-
-}
+  .outline {
+    left: -6rem;
+    top: 9.6rem;
+  }
   .text-container {
     margin-left: 0.25rem; /* Reduce margin for mobile screens */
   }
@@ -236,7 +230,7 @@ top: 7rem;
   }
 
   .person-image {
-    left: 13rem;
+    left: 10rem;
     top: 1rem; /* Adjust top positioning */
     width: 10rem; /* Adjust width for mobile */
     height: 12.5rem; /* Adjust height for mobile */
