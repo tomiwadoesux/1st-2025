@@ -1,23 +1,24 @@
 .main-image-container {
-    position: relative; /* Allows scrolling */
-    width: 100vw; /* Full viewport width */
-  /* Ensures section covers full screen */
-    overflow: hidden; /* Ensures content stays inside */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    background-color: #000; /* Ensures no gaps */
-  }
-  
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.main-image {
+  width: 100vw; /* Fill entire width */
+  max-height: 100vh; /* Prevents excessive cropping */
+  object-fit: contain; /* Ensures full image is visible */
+}
+
+@media (max-width: 768px) {
   .main-image {
-    width: 100vw; /* Ensures full width */`
-    height: 100vh; /* Ensures full height */
-    object-fit: cover; /* Ensures the image fully covers the section */
+      width: 100vw;
+      max-height: 100vh;
+      object-fit: contain; /* Ensures full image is visible */
   }
-  @media (max-width: 768px) {
-    .main-image {
-      /* Still cover the screen, but you might experiment with the object-position */
-      object-position: center top;
-    }
-  }
-  
+}

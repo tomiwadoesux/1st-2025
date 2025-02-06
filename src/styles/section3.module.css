@@ -5,7 +5,7 @@
 /* Overall Section Layout */
 .section-layout {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Two columns: image and text */
+  grid-template-columns: 1.2fr 1fr;
   gap: 2.5rem;
   align-items: center;
   background-color: #000;
@@ -30,7 +30,7 @@
 .outline {
   position: absolute;
   top: 13.9375rem;
-  left: -11.875rem;
+  left: -9.3rem;
   width: 18.75rem;
   height: 70%;
   border: 1px solid #fff;
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-left: -10.3125rem;
+  margin-left: -7.3125rem;
   width: 34.375rem;
   height: 34.375rem;
   top: 1.875rem;
@@ -74,11 +74,10 @@
   z-index: 1;
 }
 
-/* Person Image (layered on top) */
+/* Person Image */
 .person-image {
-  top: 33.125rem;
-  left: -14.375rem;
-  transform: translate(-30%, -40%);
+  top: 20.125rem;
+  left: -24.375rem;
   z-index: 2;
   width: 34.375rem;
   position: relative;
@@ -97,25 +96,49 @@
   max-height: 100%;
 }
 
-/* Overlay Image */
-.overlay-image {
-  position: absolute;
-  top: -1.25rem;
-  right: -1.25rem;
-  width: 31.25%;
-  z-index: 3;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.5);
+.text-down {
+  text-align: left;
+  margin-left: -50rem;
+  width: 50%;
+  margin-top: 7rem;
 }
 
-/* Text Container (Left Side) */
+.text-down p {
+  width: 100%; /* Ensures text wraps properly */
+}
+
+.text-down h2 {
+  text-align: right;
+  width: 22.5rem;
+}
+
+.text-down p {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 0.90625rem;
+  font-weight: 300;
+  width: 22.5rem;
+  text-align: justify;
+}
+
+.text-down .release-info {
+  font-size: 0.875rem;
+  color: #aaa;
+  text-align: right;
+}
+
+.text-down .release-info span {
+  color: #f00;
+}
+
+/* Text Container */
 .text-container {
   display: flex;
   flex-direction: column;
   margin-left: 42.5rem;
   position: relative;
-  bottom: 35.625rem;
-  left: -8.125rem;
+  bottom: 38.625rem;
+  left: -5.125rem;
 }
 
 .text-container h4 {
@@ -123,7 +146,6 @@
   font-family: "Segoe UI";
   font-size: 0.9375rem;
   font-weight: 700;
-  line-height: normal;
 }
 
 .text-container h2 {
@@ -131,7 +153,7 @@
   font-family: "Segoe UI";
   font-size: 1.875rem;
   font-weight: 700;
-  line-height: normal;
+  text-align: left;
   margin-top: -5.625rem;
   margin: 0;
 }
@@ -141,8 +163,6 @@
   font-family: "Segoe UI";
   font-size: 0.90625rem;
   font-weight: 300;
-  line-height: normal;
-  margin-bottom: 0;
   width: 22.5rem;
   text-align: justify;
 }
@@ -156,259 +176,212 @@
   color: #f00;
 }
 
-/* Text Container 2 (Right Side) */
-.text-container-2 {
-  display: flex;
-  flex-direction: column;
-  left: -49.375rem;
-  top: 7.8125rem;
-  position: relative;
-}
-
-.text-container-2 h4 {
-  color: #fff;
-  font-family: "Segoe UI";
-  font-size: 0.9375rem;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.text-container-2 h2 {
-  color: #fff;
-  font-family: "Segoe UI";
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: normal;
-  margin-top: -5.625rem;
-  width: 22.5rem;
-  text-align: right;
-  margin: 0;
-}
-
-.text-container-2 p {
-  color: #fff;
-  font-family: "Segoe UI";
-  font-size: 0.90625rem;
-  font-weight: 300;
-  line-height: normal;
-  margin-bottom: 0;
-  width: 22.5rem;
-  text-align: justify;
-}
-
-.text-container-2 .release-info {
-  font-size: 0.875rem;
-  color: #aaa;
-  text-align: right;
-}
-
-.text-container-2 .release-info span {
-  color: #f00;
-}
-
 /* =======================================
    Responsive Adjustments (Tablet & Mobile)
    ======================================= */
 
-/* Adjust outlines and layout on mobile */
-@media (max-width: 768px) {
-
-  /* Change grid to a single column */
+/* 🌐 Large Desktops (1440px and above) */
+@media (min-width: 1440px) {
   .section-layout {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+    max-width: 80rem;
   }
-  
-  /* Reduce left margin for the outline container */
-  .outline-container {
-    margin-left: 1rem;
-  }
-  
-  /* Adjust first outline */
-  .outline {
-    top: 10.375rem;
-    left: 0.1875rem;
-    width: 12.5rem;
-    height: 60%;
 }
-  
-  /* Adjust second outline */
-  .outline2 {
-    top: 24.5rem;
-    left: auto;
-    right: 1rem;
-    width: 15rem;
-    height: 20rem;
-  }
-  
-  /* Scale down the main image container */
+
+/* 💻 Standard Desktops (1025px - 1439px) */
+@media (max-width: 1439px) {
   .main-image-container {
-    margin: 0 auto;
-    width: 50%;
-    right: 9rem;
-    height: 12.5rem;
-    padding-top: 20%;
-    top: 0;
-}
-  
-  /* Adjust the person image */
-  .person-image {
-    margin: 0 auto;
-    width: 50%;
-    right: -10rem;
-    height: 12.5rem;
-    padding-top: 20%;
-    top: 12rem;
-    left: 15rem;
-}
-
-  .person-image img {
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Resize the overlay image */
-  .overlay-image {
-    width: 40%;
-    top: -0.5rem;
-    right: -0.5rem;
-  }
-  
-  /* Center and simplify the left text container */
-  .text-container {
-    margin: 1rem auto;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    top: -50rem;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .text-container h4 {
-    font-size: 0.8rem;
-  }
-  
-  .text-container h2 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-  }
-  
-  .text-container p {
-    font-size: 0.9rem;
-    width: 40%;
-  }
-  
-  .text-container .release-info {
-    font-size: 0.9rem;
-  }
-  
-  /* Center and simplify the right text container */
-  .text-container-2 {
-    left: 0;
-    top: 1rem;
-    margin: 1rem auto;
-    text-align: right;
-    padding: 1rem;
-  }
-  
-  .text-container-2 h4 {
-    font-size: 0.8rem;
-  }
-  
-  .text-container-2 h2 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    text-align: right;
-  }
-  
-  .text-container-2 p {
-    font-size: 0.9rem;
-    width: 60%;
-    text-align: right;
-  }
-  
-  .text-container-2 .release-info {
-    font-size: 0.9rem;
-    text-align: right;
+    width: 80%;
+    height: auto;
+    left: -4rem;
+    top: 1.25rem;
   }
 }
 
-/* Tablet adjustments (if needed, merging with mobile styles here) */
-@media (max-width: 1024px) {
+/* 📱 Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
   .section-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem 1rem;
   }
-  
+
+  .text-container {
+    left: 12%;
+    top: -38%;
+    margin-left: 12%;
+    width: 50%;
+  }
+
+  .text-container p {
+    width: 50%;
+  }
+
+  .main-image-container {
+    width: 50%;
+    height: auto;
+    left: 10%;
+    top: 5%;
+  }
+
+  .outline {
+    left: -6%;
+    top: 13%;
+  }
+
+  .outline2 {
+    left: 22%;
+    top: 19%;
+    height: 9%;
+    width: 15%;
+  }
+
+  .person-image {
+    left: 30%;
+    top: 7%;
+    width: 100%;
+    height: 30%;
+  }
+}
+
+/* 📱 Small Tablets (600px - 767px) */
+@media (max-width: 767px) {
+  .section-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .text-container {
+    margin-left: 5%;
+    text-align: center;
+    width: 90%;
+  }
+
+  .main-image-container {
+    width: 80%;
+    height: auto;
+  }
+
+  .person-image {
+    left: 10%;
+    top: 1%;
+    width: 80%;
+  }
+}
+
+/* 📱 Mobile Phones (480px - 599px) */
+@media (max-width: 599px) {
+  .main-image-container {
+    width: 100%;
+    left: 0;
+  }
+
+  .person-image {
+    width: 80%;
+    left: auto;
+  }
+
+  .text-container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 📱 Small Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .text-container h2 {
+    font-size: 1rem;
+  }
+
+  .text-container p {
+    font-size: 0.8rem;
+  }
+
+  .main-image-container {
+    height: auto;
+  }
+}
+@media (max-width: 1280px) {
+  /* Outline */
+  .section-layout {
+    padding-bottom: 20rem;
+  }
+  .outline {
+    top: 10.9375rem;
+    left: -5.3rem;
+    width: 18.75rem;
+    height: 70%;
+  }
+
+  /* Secondary Outline */
+  .outline2 {
+    top: 18.5rem;
+    height: 80%;
+    left: 42.0625rem;
+  }
+
+  /* Main Image Container */
+  .main-image-container {
+    width: 45%;
+    left: 6%;
+  }
+
+  /* Main Image */
+  .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .person-image {
+    width: 28rem;
+    height: 27rem;
+  }
+
+  .text-container {
+    bottom: 32.625rem;
+    left: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-image-container {
+    width: 70%;
+    left: 6%;
+  }
+  .outline {
+    top: 9.9375rem;
+    left: -6.5rem;
+  }
+  .text-container {
+    top: -26.375rem;
+    left: 0.875rem;
+  }
+  .text-container p {
+    width: 60%;
+  }
  
-  .text-container{
-    /* Use similar centering as mobile */
-    margin: 1rem auto;
-    position: relative;
-    bottom: 0;
-    left: 26rem;
+  .text-down {
     text-align: left;
-    padding: 1rem;
+    margin-left: 16.5rem;
+    /* margin-right: 90rem; */
+    width: 99%;
+    z-index: 99;
+    margin-top: 1rem;
   }
-
-
-  .text-container-2 {
-    /* Use similar centering as mobile */
-    margin: 1rem auto;
-    position: relative;
-    top: -27.5rem;
-    left: 0rem;
-    text-align: right;
-    padding: 1rem;
-  
+  .text-down p{
+    /* width: 70%; */
   }
-  
-  .text-container h4{
-    font-size: 0.8rem;
-    
+  .person-image {
+    width: 28rem;
+    height: 27rem;
+    top: 55%;
+    left: 24%;
   }
-  
-  .text-container-2 h4 {
-    font-size: 0.8rem;
-    
-  }
-  
-  .text-container h2{
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .text-container-2 h2 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    text-align: right;
-    width: 17.5rem;
-  }
-  
-  .text-container p{
-    font-size: 0.9rem;
-    width: 40%;
-    text-align: justify;
-
-  }
-  
-  .text-container-2 p {
-    font-size: 0.9rem;
-    width: 40%;
-    text-align: justify;
-
-  }
-  
-  .text-container .release-info{
-    font-size: 0.9rem;
-  }
-
-  .text-container-2 .release-info {
-    font-size: 0.9rem;
+  .outline2{
+    top: 42.5rem;
+    height: 80%;
+    left: 27.0625rem;
   }
 }
