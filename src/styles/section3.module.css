@@ -296,8 +296,8 @@
 }
 
 /* 📱 Small Tablets (max-width: 767px) */
-@media (max-width: 767px) {
-  `
+@media (max-width: 767px),(max-width: 599px)  {
+  n
   .section-layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -309,12 +309,12 @@
     width: 80%;
   }
   .main-image-container {
-    width: 70%;
-    left: -16%;
+    width: 50%;
+    left: -26%;
   }
 
   .outline {
-    top: 13.9375rem;
+    top: 10.9375rem;
     left: -6.5rem;
   }
 
@@ -328,60 +328,21 @@
   }
 
   .text-down {
-    margin-top: 7rem;
+    margin-top: 30rem;
+    left: -19.5rem;
   }
 
   .person-image {
     width: 28rem;
     height: 27rem;
-    top: 55%;
+    top: 60%;
     left: 24%;
   }
 
   .outline2 {
-    top: 53.5rem;
+    top: 44.5rem;
     height: 80%;
-    left: 18.0625rem;
+    left: 15.0625rem;
   }
 }
 
-/* 📱 Mobile Phones (max-width: 599px) */
-@media (max-width: 599px) {
-  .main-image-container {
-    width: 100%;
-    left: 0;
-  }
-
-  .person-image {
-    width: 80%;
-    left: auto;
-  }
-
-  .text-container {
-    width: 100%;
-    text-align: center;
-  }
-
-  .text-down {
-    margin-top: 7rem;
-  }
-}
-
-/* 📱 Small Mobile Screens (max-width: 480px) */
-@media (max-width: 480px) {
-  .text-container h2 {
-    font-size: 1rem;
-  }
-
-  .text-container p {
-    font-size: 0.8rem;
-  }
-
-  .main-image-container {
-    height: auto;
-  }
-
-  .text-down {
-    margin-top: 7rem;
-  }
-}

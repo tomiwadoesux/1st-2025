@@ -279,7 +279,7 @@
 
   
   /* 📱 Small Tablets (max-width: 767px) */
-  @media (max-width: 767px) {
+  @media (max-width: 767px),(max-width: 599px)  {
     .sectionContainer {
       padding-top: 8rem;
     }
@@ -312,24 +312,11 @@
       top: 0.75rem;
     }
     .text-container {
-      bottom: 23.5rem;
-      left: -7.375rem;
+      top: -19rem;
+      left: -1.375rem;
     }
   }
   
-  /* 📱 Small Phones (max-width: 599px) */
-  @media (max-width: 599px) {
-    .main-image-container {
-      width: 100%;
-      left: 0;
-    }
-    .outline {
-      top: 8.9375rem;
-      left: -0.5rem;
-    }
-    .person-image {
-      width: 41%;
-      left: 10rem;
-    }
-  }
+ 
+  
   
