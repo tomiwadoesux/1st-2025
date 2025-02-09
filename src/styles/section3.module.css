@@ -96,48 +96,13 @@
   max-height: 100%;
 }
 
-.text-down {
-  text-align: left;
-  margin-left: -50rem;
-  width: 50%;
-  margin-top: 7rem;
-}
-
-.text-down p {
-  width: 100%; /* Ensures text wraps properly */
-}
-
-.text-down h2 {
-  text-align: right;
-  width: 22.5rem;
-}
-
-.text-down p {
-  color: #fff;
-  font-family: "Segoe UI";
-  font-size: 0.90625rem;
-  font-weight: 300;
-  width: 22.5rem;
-  text-align: justify;
-}
-
-.text-down .release-info {
-  font-size: 0.875rem;
-  color: #aaa;
-  text-align: right;
-}
-
-.text-down .release-info span {
-  color: #f00;
-}
-
 /* Text Container */
 .text-container {
   display: flex;
   flex-direction: column;
   margin-left: 42.5rem;
   position: relative;
-  bottom: 38.625rem;
+  bottom: 35.625rem;
   left: -5.125rem;
 }
 
@@ -175,30 +140,106 @@
 .text-container .release-info span {
   color: #f00;
 }
+.text-down {
+  display: flex;
+  flex-direction: column;
+  margin-left: 42.5rem;
+  position: relative;
+  bottom: -6.375rem;
+  left: -92.125rem;
+}
+
+.text-down h4 {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.text-down h2 {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: left;
+  /* margin-top: -5.625rem; */
+  margin: 0;
+}
+
+.text-down p {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 0.90625rem;
+  font-weight: 300;
+  width: 22.5rem;
+  text-align: justify;
+}
+
+.text-down .release-info {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.text-down .release-info span {
+  color: #f00;
+}
 
 /* =======================================
-   Responsive Adjustments (Tablet & Mobile)
+   Responsive Adjustments (Ordered from Largest to Smallest)
    ======================================= */
 
-/* 🌐 Large Desktops (1440px and above) */
-@media (min-width: 1440px) {
-  .section-layout {
-    max-width: 80rem;
-  }
-}
-
-/* 💻 Standard Desktops (1025px - 1439px) */
+/* 📱 Large Screens (max-width: 1439px) */
 @media (max-width: 1439px) {
+  /* .text-container{
+
+} */
+}
+
+/* 📱 Medium Screens (max-width: 1280px) */
+@media (max-width: 1280px) {
+  .section-layout {
+    padding-bottom: 70rem;
+  }
+
+  .outline {
+    top: 12.9375rem;
+    left: -8rem;
+    width: 18.75rem;
+    height: 70%;
+  }
+
+  .outline2 {
+    top: 44rem;
+    height: 80%;
+    left: 46.0625rem;
+  }
+
   .main-image-container {
-    width: 80%;
-    height: auto;
-    left: -4rem;
-    top: 1.25rem;
+    width: 70%;
+    left: 1%;
+    top: 1.2rem;
+  }
+
+  .person-image {
+    width: 36rem;
+    height: 36rem;
+    left: -44%;
+    top: 130%;
+  }
+
+  .text-container {
+    top: -343%;
+    left: 1.875rem;
+  }
+
+  .text-down {
+    bottom: -34rem;
+    left: -95.5rem;
   }
 }
 
-/* 📱 Tablets (768px - 1023px) */
-@media (max-width: 1023px) {
+/* 📱 Tablets (max-width: 1023px) */
+@media (max-width: 1024px), (max-width: 1023px) {
   .section-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -206,59 +247,60 @@
   }
 
   .text-container {
-    left: 12%;
-    top: -38%;
-    margin-left: 12%;
-    width: 50%;
+    left: -5.125rem;
+    top: -64rem;
   }
 
   .text-container p {
-    width: 50%;
+    top: -536%;
+    left: -11%;
+  }
+  .outline-container {
+    flex-direction: column;
   }
 
   .main-image-container {
     width: 50%;
     height: auto;
-    left: 10%;
+    left: -23%;
     top: 5%;
   }
 
   .outline {
-    left: -6%;
-    top: 13%;
+    left: -9%;
+    top: 36%;
   }
 
   .outline2 {
-    left: 22%;
-    top: 19%;
-    height: 9%;
-    width: 15%;
+    left: 52%;
+    top: 38rem;
   }
 
   .person-image {
-    left: 30%;
-    top: 7%;
-    width: 100%;
-    height: 30%;
+    left: 43%;
+    width: 30rem;
+    height: 30rem;
+    top: 29%;
+  }
+
+  .text-down {
+    margin-top: 7rem;
+    bottom: 25rem;
+    left: -38.5rem;
+  }
+
+  .text-down p {
+    width: 19.5rem;
+    text-align: right;
   }
 }
 
-/* 📱 Small Tablets (600px - 767px) */
+/* 📱 Small Tablets (max-width: 767px) */
 @media (max-width: 767px) {
+  `
   .section-layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .text-container {
-    margin-left: 5%;
-    text-align: center;
-    width: 90%;
-  }
-
-  .main-image-container {
-    width: 80%;
-    height: auto;
   }
 
   .person-image {
@@ -266,9 +308,44 @@
     top: 1%;
     width: 80%;
   }
+  .main-image-container {
+    width: 70%;
+    left: -16%;
+  }
+
+  .outline {
+    top: 13.9375rem;
+    left: -6.5rem;
+  }
+
+  .text-container {
+    top: -25.375rem;
+    left: -38.125rem;
+  }
+
+  .text-container p {
+    width: 180%;
+  }
+
+  .text-down {
+    margin-top: 7rem;
+  }
+
+  .person-image {
+    width: 28rem;
+    height: 27rem;
+    top: 55%;
+    left: 24%;
+  }
+
+  .outline2 {
+    top: 53.5rem;
+    height: 80%;
+    left: 18.0625rem;
+  }
 }
 
-/* 📱 Mobile Phones (480px - 599px) */
+/* 📱 Mobile Phones (max-width: 599px) */
 @media (max-width: 599px) {
   .main-image-container {
     width: 100%;
@@ -283,6 +360,10 @@
   .text-container {
     width: 100%;
     text-align: center;
+  }
+
+  .text-down {
+    margin-top: 7rem;
   }
 }
 
@@ -299,89 +380,8 @@
   .main-image-container {
     height: auto;
   }
-}
-@media (max-width: 1280px) {
-  /* Outline */
-  .section-layout {
-    padding-bottom: 20rem;
-  }
-  .outline {
-    top: 10.9375rem;
-    left: -5.3rem;
-    width: 18.75rem;
-    height: 70%;
-  }
 
-  /* Secondary Outline */
-  .outline2 {
-    top: 18.5rem;
-    height: 80%;
-    left: 42.0625rem;
-  }
-
-  /* Main Image Container */
-  .main-image-container {
-    width: 45%;
-    left: 6%;
-  }
-
-  /* Main Image */
-  .main-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  .person-image {
-    width: 28rem;
-    height: 27rem;
-  }
-
-  .text-container {
-    bottom: 32.625rem;
-    left: 0.875rem;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .main-image-container {
-    width: 70%;
-    left: 6%;
-  }
-  .outline {
-    top: 9.9375rem;
-    left: -6.5rem;
-  }
-  .text-container {
-    top: -26.375rem;
-    left: 0.875rem;
-  }
-  .text-container p {
-    width: 60%;
-  }
- 
   .text-down {
-    text-align: left;
-    margin-left: 16.5rem;
-    /* margin-right: 90rem; */
-    width: 99%;
-    z-index: 99;
-    margin-top: 1rem;
-  }
-  .text-down p{
-    /* width: 70%; */
-  }
-  .person-image {
-    width: 28rem;
-    height: 27rem;
-    top: 55%;
-    left: 24%;
-  }
-  .outline2{
-    top: 42.5rem;
-    height: 80%;
-    left: 27.0625rem;
+    margin-top: 7rem;
   }
 }

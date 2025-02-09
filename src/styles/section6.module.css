@@ -1,18 +1,25 @@
 .main-image-container {
-  position: relative;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
   display: flex;
-  justify-content: center;
+  gap: 40px;
   align-items: center;
-  background-color: #000;
+  background-color: #000; /* Black background */
+  color: #fff;
+  position: relative;
+  width: 1613px;
+  height: 780px;
+  flex-direction: column;
+  padding-bottom: 0px;
 }
 
 .main-image {
-  width: 100vw; /* Fill entire width */
-  max-height: 100vh; /* Prevents excessive cropping */
-  object-fit: contain; /* Ensures full image is visible */
+  position: relative; /* Enables child elements like overlays or controls to be positioned */
+  width: 100%; /* Full width of the parent container */
+  /* max-width: 1200px;  */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Ensures video stays inside the container */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 @media (max-width: 768px) {
